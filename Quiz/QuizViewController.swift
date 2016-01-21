@@ -13,6 +13,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var quizView: ViewWilthButton!
     
     var question:Question?
+    var victorine:[Question]?
     
     //MARK: - View LifeCycle
     override func viewDidLoad() {
@@ -29,13 +30,11 @@ class QuizViewController: UIViewController {
     }
     
     func setupModel() {
-        question = Question(text: "Как звали няню Пушкина?",
-            answers: ["Вася",
-                      "Арина Радионовна",
-                      "Виолетта Акардионовна",
-                      "Александра Юрьевна"],
-            correctAnswer: "Арина Радионовна",
-            imageName: "1")
+        let storeManager = StoreManager()
+        
+        victorine = storeManager.loadQuestionsByTheme("theme")
+        
+        question = victorine?.first
     }
     
     func setupViewWithQuestion(aQuestion:Question) {

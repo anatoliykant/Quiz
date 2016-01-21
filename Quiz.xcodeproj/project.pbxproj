@@ -14,6 +14,7 @@
 		4F031B391C4FEFDD0045877C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F031B381C4FEFDD0045877C /* QuizViewController.swift */; };
 		4F031B3B1C4FF0B50045877C /* Quiestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F031B3A1C4FF0B50045877C /* Quiestion.swift */; };
 		4F031B3D1C4FF9BF0045877C /* ViewWilthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F031B3C1C4FF9BF0045877C /* ViewWilthButton.swift */; };
+		F5B409F21C5148FA000200BD /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B409F11C5148FA000200BD /* StoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4F031B381C4FEFDD0045877C /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		4F031B3A1C4FF0B50045877C /* Quiestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiestion.swift; sourceTree = "<group>"; };
 		4F031B3C1C4FF9BF0045877C /* ViewWilthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWilthButton.swift; sourceTree = "<group>"; };
+		F5B409F11C5148FA000200BD /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				4F031B3C1C4FF9BF0045877C /* ViewWilthButton.swift */,
 				4F031B2D1C4FEB980045877C /* Assets.xcassets */,
 				4F031B381C4FEFDD0045877C /* QuizViewController.swift */,
+				F5B409F11C5148FA000200BD /* StoreManager.swift */,
 				4F031B3A1C4FF0B50045877C /* Quiestion.swift */,
 				4F031B2F1C4FEB980045877C /* LaunchScreen.storyboard */,
 				4F031B321C4FEB980045877C /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				4F031B271C4FEB980045877C /* AppDelegate.swift in Sources */,
 				4F031B3B1C4FF0B50045877C /* Quiestion.swift in Sources */,
+				F5B409F21C5148FA000200BD /* StoreManager.swift in Sources */,
 				4F031B391C4FEFDD0045877C /* QuizViewController.swift in Sources */,
 				4F031B3D1C4FF9BF0045877C /* ViewWilthButton.swift in Sources */,
 			);
@@ -294,6 +298,7 @@
 				4F031B371C4FEB980045877C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
