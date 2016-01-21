@@ -24,13 +24,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstsQuestion" translatesAutoresizingMaskIntoConstraints="NO" id="weE-9o-S0u">
                                         <rect key="frame" x="215" y="72" width="129" height="97"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNt-hl-8DP">
-                                        <rect key="frame" x="9" y="256" width="71" height="30"/>
-                                        <state key="normal" title="Вариант 1"/>
-                                        <connections>
-                                            <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="5Un-ot-2vz"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ot-qP-arS">
                                         <rect key="frame" x="473" y="256" width="77" height="30"/>
                                         <state key="normal" title=" Вариант 2"/>
@@ -38,11 +31,11 @@
                                             <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="0G6-rd-XQJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rw-Sz-t6t">
-                                        <rect key="frame" x="8" y="316" width="74" height="30"/>
-                                        <state key="normal" title="Вариант 3"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1S-ML-yZ4">
+                                        <rect key="frame" x="476" y="310" width="74" height="30"/>
+                                        <state key="normal" title="Вариант 4"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="AQi-Gl-DaJ"/>
+                                            <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="Nc3-Nn-4fZ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" текст вопроса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcr-hq-tG3">
@@ -51,17 +44,24 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1S-ML-yZ4">
-                                        <rect key="frame" x="476" y="310" width="74" height="30"/>
-                                        <state key="normal" title="Вариант 4"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNt-hl-8DP">
+                                        <rect key="frame" x="8" y="256" width="71" height="30"/>
+                                        <state key="normal" title="Вариант 1"/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="Nc3-Nn-4fZ"/>
+                                            <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="5Un-ot-2vz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rw-Sz-t6t">
+                                        <rect key="frame" x="8" y="310" width="74" height="30"/>
+                                        <state key="normal" title="Вариант 3"/>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="4bh-Bz-UTP" eventType="touchUpInside" id="AQi-Gl-DaJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="9rw-Sz-t6t" firstAttribute="top" secondItem="hNt-hl-8DP" secondAttribute="bottom" constant="30" id="406-oU-8dZ"/>
+                                    <constraint firstItem="9rw-Sz-t6t" firstAttribute="top" secondItem="hNt-hl-8DP" secondAttribute="bottom" constant="24" id="0O2-aH-hhE"/>
                                     <constraint firstItem="A1S-ML-yZ4" firstAttribute="top" secondItem="3Ot-qP-arS" secondAttribute="bottom" constant="24" id="5YX-nO-er7"/>
                                     <constraint firstItem="hNt-hl-8DP" firstAttribute="leading" secondItem="4bh-Bz-UTP" secondAttribute="leading" constant="9" id="9pv-kk-rcF"/>
                                     <constraint firstItem="3Ot-qP-arS" firstAttribute="top" secondItem="4bh-Bz-UTP" secondAttribute="top" constant="256" id="HK0-fa-XwV"/>
@@ -69,9 +69,9 @@
                                     <constraint firstAttribute="trailing" secondItem="3Ot-qP-arS" secondAttribute="trailing" constant="8" id="QuK-vC-FNq"/>
                                     <constraint firstItem="weE-9o-S0u" firstAttribute="top" secondItem="Jcr-hq-tG3" secondAttribute="bottom" constant="29" id="SYZ-hw-MvK"/>
                                     <constraint firstItem="9rw-Sz-t6t" firstAttribute="leading" secondItem="4bh-Bz-UTP" secondAttribute="leading" constant="8" id="da7-2y-qIg"/>
-                                    <constraint firstItem="hNt-hl-8DP" firstAttribute="top" secondItem="4bh-Bz-UTP" secondAttribute="top" constant="256" id="lvI-wm-X8K"/>
                                     <constraint firstItem="weE-9o-S0u" firstAttribute="centerX" secondItem="4bh-Bz-UTP" secondAttribute="centerX" id="mOC-pv-aEl"/>
                                     <constraint firstAttribute="trailing" secondItem="A1S-ML-yZ4" secondAttribute="trailing" constant="8" id="tIt-LC-b52"/>
+                                    <constraint firstItem="hNt-hl-8DP" firstAttribute="top" secondItem="4bh-Bz-UTP" secondAttribute="top" constant="256" id="xyK-t6-rSD"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="button1" destination="hNt-hl-8DP" id="ZdD-mF-OnE"/>

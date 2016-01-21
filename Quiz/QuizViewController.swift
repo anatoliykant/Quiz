@@ -33,7 +33,6 @@ class QuizViewController: UIViewController {
         let storeManager = StoreManager()
         
         victorine = storeManager.loadQuestionsByTheme("theme")
-        
         question = victorine?.first
     }
     
@@ -48,6 +47,7 @@ class QuizViewController: UIViewController {
 }
 
 
+
 extension QuizViewController: ViewWilthButtonDelegate {
     func buttonWithTitlePressed(title: String) {
         
@@ -56,6 +56,17 @@ extension QuizViewController: ViewWilthButtonDelegate {
             return
         }
         print("Sorry. Go back to school")
+        
+        let nextQuestion: Question
+        
+        var index = victorine?.indexOf({ $0 === question! })
+        index!++
+        
+        if index < victorine?.count  {
+            nextQuestion = victorine![index!]
+            question = nextQuestion
+            setupViewWithQuestion(question!)
+        }
     }
 }
 
