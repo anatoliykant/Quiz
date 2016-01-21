@@ -14,6 +14,7 @@
 		4F031B391C4FEFDD0045877C /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F031B381C4FEFDD0045877C /* QuizViewController.swift */; };
 		4F031B3B1C4FF0B50045877C /* Quiestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F031B3A1C4FF0B50045877C /* Quiestion.swift */; };
 		4F031B3D1C4FF9BF0045877C /* ViewWilthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F031B3C1C4FF9BF0045877C /* ViewWilthButton.swift */; };
+		F540E7441C514F2300B3D3C0 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = F540E7431C514F2300B3D3C0 /* cinema.json */; };
 		F5B409F21C5148FA000200BD /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B409F11C5148FA000200BD /* StoreManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		4F031B381C4FEFDD0045877C /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		4F031B3A1C4FF0B50045877C /* Quiestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiestion.swift; sourceTree = "<group>"; };
 		4F031B3C1C4FF9BF0045877C /* ViewWilthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWilthButton.swift; sourceTree = "<group>"; };
+		F540E7431C514F2300B3D3C0 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
 		F5B409F11C5148FA000200BD /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 		4F031B251C4FEB980045877C /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				F540E7431C514F2300B3D3C0 /* cinema.json */,
 				4F031B261C4FEB980045877C /* AppDelegate.swift */,
 				4F031B2A1C4FEB980045877C /* Main.storyboard */,
 				4F031B3C1C4FF9BF0045877C /* ViewWilthButton.swift */,
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F540E7441C514F2300B3D3C0 /* cinema.json in Resources */,
 				4F031B311C4FEB980045877C /* LaunchScreen.storyboard in Resources */,
 				4F031B2E1C4FEB980045877C /* Assets.xcassets in Resources */,
 				4F031B2C1C4FEB980045877C /* Main.storyboard in Resources */,
