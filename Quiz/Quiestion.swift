@@ -32,6 +32,20 @@ class Question {
         self.imageName = imageName
     }
     
+    init(json:NSDictionary) {
+        
+        text = json["question"] as! String
+        answers = json["answers"] as! [String]
+        correctAnswer = json["correctAnswer"] as! String
+        imageName = json["image"] as! String
+        
+    }
+    
+    
+    
+    
+    
+    
     //метод для проверки одного из вариантов ответа
     func isCorrectAnswer(variant:String) -> Bool {
         return variant == correctAnswer
