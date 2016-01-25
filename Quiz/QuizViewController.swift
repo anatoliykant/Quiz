@@ -24,7 +24,9 @@ class QuizViewController: UIViewController {
     //MARK: - Setup
     func setup() {
         self.view.backgroundColor = UIColor.orangeColor()
-        
+        //button.titleLabel?.numberOfLines = 0
+        //button1.titleLabel?.numbersOfLines = 0
+        //Button1.ti
         setupModel()
         setupViewWithQuestion(question!)
     }
