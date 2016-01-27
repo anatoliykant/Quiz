@@ -12,23 +12,37 @@ class QuizViewController: UIViewController {
     
     @IBOutlet weak var quizView: ViewWilthButton!
     
+    @IBOutlet weak var pointsLabel: UILabel!
+    
     var question:Question?
     var victorine:[Question]?
+    
+    var earnedPoints = 0 {
+        //каждый раз, когда значение заработанных очков меняется
+        //будет обновляться текст заработанных очков
+        didSet {
+            setupPointsLabel()
+        }
+    }
     
     //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        //pointsLabel.text =
     }
     
     //MARK: - Setup
     func setup() {
+        
+        title = "Кино"
         self.view.backgroundColor = UIColor.orangeColor()
         //button.titleLabel?.numberOfLines = 0
         //button1.titleLabel?.numbersOfLines = 0
         //Button1.ti
         setupModel()
         setupViewWithQuestion(question!)
+        setupPointsLabel()
     }
     
     func setupModel() {
@@ -46,6 +60,12 @@ class QuizViewController: UIViewController {
         
         quizView.delegate = self
     }
+    
+    func setupPointsLabel() {
+        let totalQuestionsCount = victorine!.count
+        let result = "Очков набрано \(earnedPoints) из \(totalQuestionsCount)"
+        pointsLabel.text = result
+     }
 }
 
 
@@ -55,19 +75,38 @@ extension QuizViewController: ViewWilthButtonDelegate {
         
         if question!.isCorrectAnswer(title) {
             print("You winner")
-            return
+            earnedPoints++
+
         }
-        print("Sorry. Go back to school")
+        else {
+            print("Sorry. Go back to school")
+        }
         
         let nextQuestion: Question
         
         var index = victorine?.indexOf({ $0 === question! })
         index!++
         
+        //Пока не дошли до последнего вопроса, будем показывать следующее
         if index < victorine?.count  {
             nextQuestion = victorine![index!]
             question = nextQuestion
             setupViewWithQuestion(question!)
+            return
+        }
+        
+        let result  = Double(earnedPoints) / Double(victorine!.count)
+        //запустим переход к новому вьюконтроллеру
+        performSegueWithIdentifier("Show Rating", sender: result)
+        
+    }
+    
+    //перед переходом на новый экран вызвывается этот метод,
+    // где может получить информацию о следующем вью контроллере
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController is ResultViewController {
+            let nextViewControler = segue.destinationViewController as! ResultViewController
+            nextViewControler.rating = sender as! Double
         }
     }
 }
