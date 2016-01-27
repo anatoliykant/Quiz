@@ -76,10 +76,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6if-vw-wsQ">
-                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Quiz cell" textLabel="k3G-xO-Huz" style="IBUITableViewCellStyleDefault" id="uma-jh-vhA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuizCell" textLabel="k3G-xO-Huz" style="IBUITableViewCellStyleDefault" id="uma-jh-vhA">
                                         <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uma-jh-vhA" id="d8r-wa-xC3">
@@ -104,7 +104,7 @@
                             <constraint firstItem="5Ea-3f-vJZ" firstAttribute="top" secondItem="6if-vw-wsQ" secondAttribute="bottom" id="dBH-1O-SFA"/>
                             <constraint firstAttribute="trailing" secondItem="6if-vw-wsQ" secondAttribute="trailing" id="hYx-sn-Yxj"/>
                             <constraint firstItem="6if-vw-wsQ" firstAttribute="leading" secondItem="2ih-uk-z7U" secondAttribute="leading" id="usW-3i-fIB"/>
-                            <constraint firstItem="6if-vw-wsQ" firstAttribute="top" secondItem="g1a-yD-zM1" secondAttribute="bottom" id="xhg-zk-ar3"/>
+                            <constraint firstItem="6if-vw-wsQ" firstAttribute="top" secondItem="g1a-yD-zM1" secondAttribute="bottom" constant="-64" id="xhg-zk-ar3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IM4-92-QCo"/>

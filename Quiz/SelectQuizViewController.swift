@@ -20,9 +20,11 @@ class SelectQuizViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
         allQuizes = loadAllQuizes()
+        tableView.dataSource = self
+        tableView.delegate = self
             }
     
     func loadAllQuizes() -> [[String:AnyObject]] {
@@ -48,4 +50,27 @@ class SelectQuizViewController: UIViewController {
         print("found jsons \(loadedJSONs))")
         return loadedJSONs
     }
+}
+
+extension SelectQuizViewController: UITableViewDataSource {
+  
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allQuizes!.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("QuizCell", forIndexPath: indexPath)
+        let quize = quizAtIndexPath(indexPath)
+        let name = quize["name"] as! String
+        cell.textLabel?.text = name
+        return cell
+    }
+    
+    func quizAtIndexPath(index: NSIndexPath) -> [String : AnyObject] {
+        return allQuizes![index.row]
+    }
+}
+
+extension SelectQuizViewController: UITableViewDelegate {
+    
 }
