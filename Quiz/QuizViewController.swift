@@ -26,10 +26,26 @@ class QuizViewController: UIViewController {
     }
     
     //MARK: - View LifeCycle
+    
+    //В этот момент лучше всего заняться загрузкой требовательных операций
+    //чего-то, что потребует большого количества времени
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        //pointsLabel.text =
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        prepareToAnimate()
+    }
+    
+    override func viewDidAppear(animated:Bool) {
+        super.viewWillAppear(animated)
+        quizView.show(true, animated: true)
+    }
+    
+    func prepareToAnimate(){
+        quizView.show(false, animated:false)
     }
     
     //MARK: - Setup
@@ -47,6 +63,12 @@ class QuizViewController: UIViewController {
     
     func setupModel() {
         let storeManager = StoreManager()
+        
+        if victorine != nil {
+            question = victorine?.first
+            return
+        }
+        //let storeManager = StoreManager()
         
         victorine = storeManager.loadQuestionsByTheme("theme")
         question = victorine?.first

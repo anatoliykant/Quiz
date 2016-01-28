@@ -111,6 +111,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="6if-vw-wsQ" id="l1a-jc-lT8"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowQuiz" id="aNd-Aw-EcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWA-yo-8Jy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -150,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jq5-Ew-TB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="427" y="266"/>
+            <point key="canvasLocation" x="466" y="266"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -280,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="266"/>
+            <point key="canvasLocation" x="81" y="266"/>
         </scene>
     </scenes>
     <resources>
