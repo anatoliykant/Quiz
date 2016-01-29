@@ -39,11 +39,14 @@ class ViewWilthButton: UIView {
         let backgroundColor = show ? UIColor.whiteColor() : UIColor.blackColor()
         
         //анимация view, на которой лежат все остальные viewes
-        UIView.animateWithDuration(duration) { () -> Void in
+        UIView.animateWithDuration(duration, animations:  { () -> Void in
             let alpha = show ? 1 : 0
             self.alpha = CGFloat(alpha)
             self.backgroundColor = backgroundColor
+            }) {(completed) -> Void in
+            self.showButtons(show, animated: animated)
         }
+        
         
         //Показать заголовок
         let titleDuration:NSTimeInterval = animated ? 0.25 : 0
@@ -53,7 +56,7 @@ class ViewWilthButton: UIView {
             })
             { (completed) -> Void in
                 
-                
+                //по завершению первой анимации запустим следующую
                 UIView.animateWithDuration(titleDuration, animations: { () -> Void in
 
                 //по завершении показа заголовка, отобразим картинку
@@ -72,10 +75,34 @@ class ViewWilthButton: UIView {
                             let transform = CGAffineTransformMakeScale(finalScale, finalScale)
                             self.imageView.transform = transform
                          })
-                }
+                    }
             }
     }
     
+    func showButtons(show:Bool, animated:Bool) {
+        
+        let shiftXLeft = show ? 0 : -self.button1.frame.size.width
+        let shiftXRight = -shiftXLeft
+        let duration = animated ? 0.4 : 0
+        
+        move(button1, toTranslation: shiftXLeft, withDuration: duration, options: [.CurveEaseIn] )
+        move(button3, toTranslation: shiftXLeft, withDuration: duration, options: [.CurveEaseOut])
+        move(button2, toTranslation: shiftXRight, withDuration: duration, options: [.CurveLinear])
+        move(button4, toTranslation: shiftXRight, withDuration: duration, options: [.CurveLinear])
+        
+        
+    }
+    
+    func move(button:UIButton, toTranslation:CGFloat, withDuration:NSTimeInterval, options: UIViewAnimationOptions){
+        UIView.animateWithDuration(withDuration,
+            delay:  0,
+            options: options,
+            animations: { () -> Void in
+                let transform = CGAffineTransformMakeTranslation(toTranslation, 0)
+                button.transform = transform
+            },
+            completion: nil)
+    }
     
     func updateTopText(text:String){
         topText.text = text
